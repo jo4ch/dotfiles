@@ -3,6 +3,7 @@
  * NAME: dt-dmenu.rasi
  * DESCRIPTION: This is a horizontal prompt similar to dmenu.
  * AUTHOR: Derek Taylor (DT)
+ * CUSTOMISED BY: jo4ch
  */
 
 * {
