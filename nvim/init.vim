@@ -66,8 +66,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'rhysd/clever-f.vim'
 	" Underlines all occurences of the word under the cursor
 	Plug 'itchyny/vim-cursorword'
-	" Reveal file in finder (OSX Specific)
-	Plug 'henrik/vim-reveal-in-finder'
 	Plug 'ryanoasis/vim-devicons'
 	" Laravel blade
 	Plug 'jwalton512/vim-blade'
@@ -149,6 +147,10 @@ nmap <F3> :let @+ = expand("%:p") <enter>
 
 " Ax-uploader
 nmap <F10> :!python3 ~/Dev/Ax/ax-uploader/__main__.py "%:p" <enter>
+nmap <F2> :split <BAR> term python3 ~/Dev/Ax/ax-uploader/__main__.py "%:p" <enter>
+
+" Reveal file in thunar
+nmap <leader>r :silent exec "!thunar '%:p'" <enter>
 
 " I hate escape more than anything else
 inoremap jk <Esc>
@@ -214,7 +216,7 @@ nmap <leader>, :FZF<cr>
 nmap <leader>f :Ag<cr>
 
 " Reveal file in finder
-nmap <leader>r :Reveal<cr>
+" nmap <leader>r :Reveal<cr>
 
 " Easier close
 nmap <leader>w :bd<cr>
